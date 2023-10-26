@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between; 
+            text-align: center;
+        }
+  
+        .column {
+            width: 45%;
+            text-align: center;
+            display: flex; 
+            flex-direction: column;
+            align-items: center;; 
+        }
+  
+        .image {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+        }
+        body {
+            padding: 80px; 
+        }
+    </style>
+  </head>
+
+  <body>
+     <div style="text-align: center;">
+         <h2 style="color: black">
+            Which one is cuter?
+        </h2>
+        <div class="container">
+            <div class="column">
+                <h2>Group1</h2>
+                <h4>Overhead View of the Entire Room</h4>
+                <img src="./static/{{ url[0]['whole'] }}" alt="myimg1" class="image">
+                
+                {% for room_name, room_data in url[0]['Rooms'].items() %}
+                    <h4>{{ room_name }}</h4>
+                    {% for view, url in room_data.items() %}
+                        <h5>{{ view }}</h5>
+                        <img src="./static/{{ url }}" alt="myimg1" class="image">
+                    {% endfor %}
+                {% endfor %}
+            </div>
+            <div class="column">
+                <h2>Group2</h2>
+                <h4>Overhead View of the Entire Room</h4>
+                <img src="./static/{{ url[1]['whole'] }}" alt="myimg1" class="image">
+                
+                {% for room_name, room_data in url[1]['Rooms'].items() %}
+                    <h4>{{ room_name }}</h4>
+                    {% for view, url in room_data.items() %}
+                        <h5>{{ view }}</h5>
+                        <img src="./static/{{ url }}" alt="myimg1" class="image">
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+     </div>
+     </br>
+     <div style="text-align: center;">
+         <button type='button' id ='left'>Left</button>
+         <button type='button' id ='right'>Right</button>
+     </div>
+
+     </br>
+     </br>
+     <div style="text-align: center;">
+         <button type='button' id ='retrieve'>Start/Show next image</button>
+     </div>
+  </body>
+
+  <script>
+    var id_left = {{ url[0]['id']|tojson|safe }};
+    var id_right = {{ url[0]['id']|tojson|safe }};
+    $(document).ready(function() {
+        $('#retrieve').click(function() {
+            location.reload();
+        });
+    });
+
+    $(document).ready(function(){
+        $('#left').click(function(){
+            $.ajax({
+                url: '/receive_choice',
+                data : {'better': id_left, 'worse':id_right},
+                type: 'POST',
+                success: function(response){
+                    console.log(response);
+                },
+                complete: function() {
+                    location.reload();
+                }
+            });
+        });
+    });
+
+    $(document).ready(function(){
+        $('#right').click(function(){
+            $.ajax({
+                url: '/receive_choice',
+                data : {'better':  id_right, 'worse': id_left},
+                type: 'POST',
+                success: function(response){
+                    console.log(response);
+                },
+                complete: function() {
+                    location.reload();
+                }
+            });
+        });
+    });
+  </script>
+</html>

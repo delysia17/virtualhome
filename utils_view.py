@@ -12,13 +12,18 @@ objs_list = ["coffeetable",
             "stall",
             "kitchencounter",
             "kitchentable",
-            "nightstand",
+            # "nightstand",
             "sofa",
             "tvstand",
-            'closet',
-            'bookshelf']
+            # 'closet',
+            # 'bookshelf',
+            'cabinet']
+
 
 obj_arg = {'desk': {'full_view': [-0.5, 1.5, 1.2, 25, -25, 50],
+  'top_view': [0, 2, 0.5, 60, 0, 70],
+  'side_view': [1.3, 1.4, 0, 20, 85, 50]},
+  'cabinet': {'full_view': [-0.5, 1.5, 1.2, 25, -25, 50],
   'top_view': [0, 2, 0.5, 60, 0, 70],
   'side_view': [1.3, 1.4, 0, 20, 85, 50]},
  'kitchentable': {'full_view': [-0.5, 1.5, 1.2, 25, -25, 50],
@@ -351,6 +356,7 @@ def get_scene_cameras(comm, ids, mode='normal'):
 
 def display_comparison_cameras(comm, ids, view = 2, nrows=1, mode='normal'):
     imgs = get_scene_cameras(comm, ids, mode)
+    nrows = np.ceil(len(imgs) / 6).astype(int)
     return display_comparison_img(imgs, view = view, nrows=nrows)
 
 def get_closeup_obj(comm, o, camera_args, sign_x, sign_z):            
@@ -397,3 +403,15 @@ def get_closeup_room(comm, room, view = 3, nrows = 1):
         for obj in objs[:]:
             cameras = get_closeups_obj(comm, r, obj, cameras,)
     return display_comparison_cameras(comm, cameras, view = view, nrows = nrows)
+
+
+import json
+
+def save_json(filename, data):
+    with open(filename, 'w') as file:
+        json.dump(data, file, indent=4)
+
+def load_json(filename):
+    with open(filename, 'r') as file:
+        data = json.load(file)
+    return data
