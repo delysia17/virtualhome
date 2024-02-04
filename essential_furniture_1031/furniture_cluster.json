@@ -1,0 +1,242 @@
+{
+    "bedroom": {
+        "tv": [
+            "tv",
+            "tvstand",
+            "remotecontrol"
+        ],
+        "coffeetable": [
+            "coffeetable"
+        ],
+        "desk": [
+            "desk"
+        ],
+        "chair": [
+            "chair"
+        ],
+        "sofa": [
+            "sofa"
+        ],
+        "cabinet": [
+            "cabinet"
+        ],
+        "window": [
+            "window"
+        ],
+        "bed": [
+            "bed",
+            "pillow"
+        ],
+        "closet": [
+            "closet",
+            "closetdrawer",
+            "clothesshirt",
+            "clothespile"
+        ]
+    },
+    "bathroom": {
+        "sink": [
+            "sink"
+        ],
+        "stall": [
+            "stall"
+        ],
+        "bathroomcabinet": [
+            "bathroomcabinet"
+        ],
+        "garbagecan": [
+            "garbagecan"
+        ],
+        "toiletpaper": [
+            "toiletpaper"
+        ],
+        "washingmachine": [
+            "washingmachine"
+        ],
+        "toilet": [
+            "toilet"
+        ],
+        "bathroomcounter": [
+            "bathroomcounter"
+        ],
+        "bathtub": [
+            "bathtub"
+        ],
+        "curtains": [
+            "curtains"
+        ],
+        "faucet": [
+            "faucet"
+        ],
+        "deodorant": [
+            "deodorant"
+        ],
+        "bath_area": [
+            "slippers",
+            "hairproduct"
+        ],
+        "towel_area": [
+            "towelrack",
+            "towel"
+        ],
+        "wash_up_area": [
+            "toothbrush",
+            "facecream",
+            "toothpaste",
+            "waterglass",
+            "washingsponge",
+            "barsoap"
+        ]
+    },
+    "livingroom": {
+        "ceilingfan": [
+            "ceilingfan"
+        ],
+        "pillow": [
+            "pillow"
+        ],
+        "orchid": [
+            "orchid"
+        ],
+        "bookshelf": [
+            "bookshelf"
+        ],
+        "garbagecan": [
+            "garbagecan"
+        ],
+        "walllamp": [
+            "walllamp"
+        ],
+        "wallpictureframe": [
+            "wallpictureframe"
+        ],
+        "coffeetable": [
+            "coffeetable"
+        ],
+        "desk": [
+            "desk"
+        ],
+        "curtains": [
+            "curtains"
+        ],
+        "chair": [
+            "chair"
+        ],
+        "sofa": [
+            "sofa"
+        ],
+        "cabinet": [
+            "cabinet"
+        ],
+        "window": [
+            "window"
+        ],
+        "tv": [
+            "tv",
+            "tvstand",
+            "remotecontrol"
+        ],
+        "papers": [
+            "book",
+            "magazine",
+            "folder",
+            "photoframe"
+        ],
+        "computer_accessories": [
+            "cpuscreen",
+            "computer",
+            "printer",
+            "keyboard",
+            "mouse",
+            "mousemat"
+        ]
+    },
+    "kitchen": {
+        "stove": [
+            "stove"
+        ],
+        "sink": [
+            "sink"
+        ],
+        "kitchencounterdrawer": [
+            "kitchencounterdrawer"
+        ],
+        "garbagecan": [
+            "garbagecan"
+        ],
+        "kitchentable": [
+            "kitchentable"
+        ],
+        "oventray": [
+            "oventray"
+        ],
+        "toaster": [
+            "toaster"
+        ],
+        "stovefan": [
+            "stovefan"
+        ],
+        "kitchencounter": [
+            "kitchencounter"
+        ],
+        "kitchencabinet": [
+            "kitchencabinet"
+        ],
+        "beverage": [
+            "juice",
+            "milk",
+            "alcohol"
+        ],
+        "cleaning_supplies": [
+            "washingsponge",
+            "dishwasher",
+            "condimentshaker",
+            "condimentbottle",
+            "dishwashingliquid"
+        ],
+        "Cookware": [
+            "fryingpan",
+            "cookingpot"
+        ],
+        "Cutting_tool": [
+            "cuttingboard",
+            "knifeblock"
+        ],
+        "Utensile": [
+            "plate",
+            "cutleryfork",
+            "mug",
+            "cutleryknife"
+        ],
+        "food": [
+            "bananas",
+            "salad",
+            "cupcake",
+            "crackers",
+            "pancake",
+            "chocolatesyrup",
+            "cutlets",
+            "cereal",
+            "breadslice",
+            "pie",
+            "mincedmeat",
+            "apple",
+            "whippedcream",
+            "pear",
+            "peach",
+            "pudding",
+            "plum",
+            "lime",
+            "candybar",
+            "poundcake",
+            "salmon",
+            "carrot",
+            "chips",
+            "candle",
+            "chicken",
+            "creamybuns",
+            "facecream",
+            "bellpepper"
+        ]
+    }
+}

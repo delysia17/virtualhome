@@ -1,0 +1,685 @@
+{
+    "bedroom": {
+        "kettle": [
+            "kettle"
+        ],
+        "ceilingfan": [
+            "ceilingfan"
+        ],
+        "orchid": [
+            "orchid"
+        ],
+        "bookshelf": [
+            "bookshelf"
+        ],
+        "garbagecan": [
+            "garbagecan"
+        ],
+        "walllamp": [
+            "walllamp"
+        ],
+        "wallpictureframe": [
+            "wallpictureframe"
+        ],
+        "curtains": [
+            "curtains"
+        ],
+        "tv": [
+            "tv",
+            "tvstand",
+            "remotecontrol"
+        ],
+        "papers": [
+            "book",
+            "magazine",
+            "folder",
+            "photoframe",
+            "journal",
+            "notes"
+        ],
+        "computer_accessories": [
+            "cpuscreen",
+            "computer",
+            "printer",
+            "keyboard",
+            "mouse",
+            "mousemat"
+        ],
+        "coffeetable": [
+            "coffeetable"
+        ],
+        "desk": [
+            "desk"
+        ],
+        "chair": [
+            "chair"
+        ],
+        "sofa": [
+            "sofa",
+            "bench"
+        ],
+        "cabinet": [
+            "cabinet"
+        ],
+        "window": [
+            "window"
+        ],
+        "bed": [
+            "bed",
+            "pillow"
+        ],
+        "closet": [
+            "closet",
+            "hanger",
+            "closetdrawer",
+            "clothesshirt",
+            "clothespile",
+            "clothespants"
+        ],
+        "amplifier": [
+            "amplifier",
+            "projector",
+            "speaker"
+        ],
+        "broom": [
+            "broom",
+            "dustpan"
+        ],
+        "lights": [
+            "nightstand",
+            "tablelamp"
+        ],
+        "cellphone": [
+            "wallphone",
+            "cellphone"
+        ],
+        "clock": [
+            "clock"
+        ],
+        "shelf": [
+            "shelf",
+            "wallshelf"
+        ],
+        "napkin": [
+            "napkin"
+        ],
+        "papertowel": [
+            "papertowel"
+        ],
+        "perfume": [
+            "perfume"
+        ],
+        "powersocket": [
+            "powersocket"
+        ],
+        "cat": [
+            "cat"
+        ],
+        "standingmirror": [
+            "standingmirror"
+        ],
+        "vase": [
+            "vase"
+        ],
+        "box": [
+            "box"
+        ],
+        "rug": [
+            "rug"
+        ],
+        "cup": [
+            "wineglass",
+            "mug"
+        ],
+        "game": [
+            "boardgame",
+            "game"
+        ],
+        "toy": [
+            "teddybear",
+            "toy",
+            "beer"
+        ],
+        "stationery": [
+            "cards",
+            "crayons",
+            "pen"
+        ],
+        "globe": [
+            "globe"
+        ],
+        "glasses": [
+            "glasses"
+        ],
+        "guitar": [
+            "guitar"
+        ],
+        "papertray": [
+            "papertray"
+        ],
+        "radio": [
+            "radio"
+        ],
+        "food": [
+            "bananas",
+            "salad",
+            "cupcake",
+            "crackers",
+            "pancake",
+            "chocolatesyrup",
+            "bread",
+            "cutlets",
+            "cereal",
+            "breadslice",
+            "pie",
+            "mincedmeat",
+            "apple",
+            "whippedcream",
+            "pear",
+            "cucumber",
+            "peach",
+            "pudding",
+            "plum",
+            "lime",
+            "candybar",
+            "poundcake",
+            "salmon",
+            "carrot",
+            "chinesefood",
+            "donut",
+            "lemon",
+            "orange",
+            "potato",
+            "sundae",
+            "tomato",
+            "watermelon",
+            "chips",
+            "candle",
+            "chicken",
+            "creamybuns",
+            "facecream",
+            "bellpepper"
+        ]
+    },
+    "bathroom": {
+        "sink": [
+            "sink"
+        ],
+        "stall": [
+            "stall"
+        ],
+        "bathroomcabinet": [
+            "bathroomcabinet"
+        ],
+        "garbagecan": [
+            "garbagecan"
+        ],
+        "toiletpaper": [
+            "toiletpaper"
+        ],
+        "washingmachine": [
+            "washingmachine"
+        ],
+        "toilet": [
+            "toilet"
+        ],
+        "bathroomcounter": [
+            "bathroomcounter"
+        ],
+        "bathtub": [
+            "bathtub",
+            "jacuzzi"
+        ],
+        "curtains": [
+            "curtains"
+        ],
+        "faucet": [
+            "faucet"
+        ],
+        "deodorant": [
+            "deodorant"
+        ],
+        "bath_area": [
+            "slippers",
+            "hairproduct"
+        ],
+        "towel_area": [
+            "towelrack",
+            "towel"
+        ],
+        "wash_up_area": [
+            "toothbrush",
+            "facecream",
+            "lotionbottle",
+            "toothpaste",
+            "waterglass",
+            "washingsponge",
+            "barsoap",
+            "soapset"
+        ],
+        "shelfsoapset": [
+            "shelfsoapset"
+        ],
+        "broom": [
+            "broom",
+            "dustpan"
+        ],
+        "lights": [
+            "nightstand",
+            "tablelamp"
+        ],
+        "cellphone": [
+            "wallphone",
+            "cellphone"
+        ],
+        "clock": [
+            "clock"
+        ],
+        "shelf": [
+            "shelf",
+            "wallshelf"
+        ],
+        "napkin": [
+            "napkin"
+        ],
+        "papertowel": [
+            "papertowel"
+        ],
+        "perfume": [
+            "perfume"
+        ],
+        "powersocket": [
+            "powersocket"
+        ],
+        "cat": [
+            "cat"
+        ],
+        "standingmirror": [
+            "standingmirror"
+        ],
+        "vase": [
+            "vase"
+        ],
+        "box": [
+            "box"
+        ],
+        "rug": [
+            "rug"
+        ],
+        "cup": [
+            "wineglass",
+            "mug"
+        ],
+        "bucket": [
+            "bucket"
+        ],
+        "closet": [
+            "closet",
+            "hanger",
+            "closetdrawer",
+            "clothesshirt",
+            "clothespile",
+            "clothespants"
+        ]
+    },
+    "livingroom": {
+        "kettle": [
+            "kettle"
+        ],
+        "ceilingfan": [
+            "ceilingfan"
+        ],
+        "pillow": [
+            "pillow"
+        ],
+        "orchid": [
+            "orchid"
+        ],
+        "bookshelf": [
+            "bookshelf"
+        ],
+        "garbagecan": [
+            "garbagecan"
+        ],
+        "walllamp": [
+            "walllamp"
+        ],
+        "wallpictureframe": [
+            "wallpictureframe"
+        ],
+        "coffeetable": [
+            "coffeetable"
+        ],
+        "desk": [
+            "desk"
+        ],
+        "curtains": [
+            "curtains"
+        ],
+        "chair": [
+            "chair"
+        ],
+        "sofa": [
+            "sofa"
+        ],
+        "cabinet": [
+            "cabinet"
+        ],
+        "window": [
+            "window"
+        ],
+        "tv": [
+            "tv",
+            "tvstand",
+            "remotecontrol"
+        ],
+        "papers": [
+            "book",
+            "magazine",
+            "folder",
+            "photoframe",
+            "journal",
+            "notes"
+        ],
+        "computer_accessories": [
+            "cpuscreen",
+            "computer",
+            "printer",
+            "keyboard",
+            "mouse",
+            "mousemat"
+        ],
+        "sports": [
+            "sportsball",
+            "balanceball",
+            "longboard"
+        ],
+        "amplifier": [
+            "amplifier",
+            "projector",
+            "speaker"
+        ],
+        "broom": [
+            "broom",
+            "dustpan"
+        ],
+        "lights": [
+            "nightstand",
+            "tablelamp"
+        ],
+        "cellphone": [
+            "wallphone",
+            "cellphone"
+        ],
+        "clock": [
+            "clock"
+        ],
+        "shelf": [
+            "shelf",
+            "wallshelf"
+        ],
+        "napkin": [
+            "napkin"
+        ],
+        "papertowel": [
+            "papertowel"
+        ],
+        "perfume": [
+            "perfume"
+        ],
+        "powersocket": [
+            "powersocket"
+        ],
+        "cat": [
+            "cat"
+        ],
+        "standingmirror": [
+            "standingmirror"
+        ],
+        "vase": [
+            "vase"
+        ],
+        "box": [
+            "box"
+        ],
+        "rug": [
+            "rug"
+        ],
+        "game": [
+            "boardgame",
+            "game"
+        ],
+        "toy": [
+            "teddybear",
+            "toy",
+            "beer"
+        ],
+        "stationery": [
+            "cards",
+            "crayons",
+            "pen"
+        ],
+        "globe": [
+            "globe"
+        ],
+        "glasses": [
+            "glasses"
+        ],
+        "guitar": [
+            "guitar"
+        ],
+        "papertray": [
+            "papertray"
+        ],
+        "radio": [
+            "radio"
+        ],
+        "cup": [
+            "wineglass",
+            "mug"
+        ],
+        "food": [
+            "bananas",
+            "salad",
+            "cupcake",
+            "crackers",
+            "pancake",
+            "chocolatesyrup",
+            "bread",
+            "cutlets",
+            "cereal",
+            "breadslice",
+            "pie",
+            "mincedmeat",
+            "apple",
+            "whippedcream",
+            "pear",
+            "cucumber",
+            "peach",
+            "pudding",
+            "plum",
+            "lime",
+            "candybar",
+            "poundcake",
+            "salmon",
+            "carrot",
+            "chinesefood",
+            "donut",
+            "lemon",
+            "orange",
+            "potato",
+            "sundae",
+            "tomato",
+            "watermelon",
+            "chips",
+            "candle",
+            "chicken",
+            "creamybuns",
+            "facecream",
+            "bellpepper"
+        ]
+    },
+    "kitchen": {
+        "stove": [
+            "stove"
+        ],
+        "kettle": [
+            "kettle"
+        ],
+        "sink": [
+            "sink"
+        ],
+        "kitchencounterdrawer": [
+            "kitchencounterdrawer"
+        ],
+        "garbagecan": [
+            "garbagecan"
+        ],
+        "kitchentable": [
+            "kitchentable",
+            "diningtable"
+        ],
+        "oventray": [
+            "oventray"
+        ],
+        "toaster": [
+            "toaster"
+        ],
+        "stovefan": [
+            "stovefan"
+        ],
+        "kitchencounter": [
+            "kitchencounter"
+        ],
+        "kitchencabinet": [
+            "kitchencabinet"
+        ],
+        "beverage": [
+            "juice",
+            "milk",
+            "alcohol",
+            "milkshake",
+            "wine"
+        ],
+        "cleaning_supplies": [
+            "washingsponge",
+            "dishwasher",
+            "dishwashingliquid"
+        ],
+        "condiment": [
+            "condimentshaker",
+            "condimentbottle"
+        ],
+        "Cookware": [
+            "fryingpan",
+            "cookingpot"
+        ],
+        "cutting_tool": [
+            "cuttingboard",
+            "knifeblock",
+            "board",
+            "chefknife",
+            "painkillers",
+            "spoon"
+        ],
+        "Utensile": [
+            "plate",
+            "cutleryfork",
+            "cutleryknife",
+            "painkillers"
+        ],
+        "microwave": [
+            "microwave"
+        ],
+        "food": [
+            "bananas",
+            "salad",
+            "cupcake",
+            "crackers",
+            "pancake",
+            "chocolatesyrup",
+            "bread",
+            "cutlets",
+            "cereal",
+            "breadslice",
+            "pie",
+            "mincedmeat",
+            "apple",
+            "whippedcream",
+            "pear",
+            "cucumber",
+            "peach",
+            "pudding",
+            "plum",
+            "lime",
+            "candybar",
+            "poundcake",
+            "salmon",
+            "carrot",
+            "chinesefood",
+            "donut",
+            "lemon",
+            "orange",
+            "potato",
+            "sundae",
+            "tomato",
+            "watermelon",
+            "chips",
+            "candle",
+            "chicken",
+            "creamybuns",
+            "facecream",
+            "bellpepper"
+        ],
+        "cup": [
+            "wineglass",
+            "mug"
+        ],
+        "broom": [
+            "broom",
+            "dustpan"
+        ],
+        "lights": [
+            "nightstand",
+            "tablelamp"
+        ],
+        "cellphone": [
+            "wallphone",
+            "cellphone"
+        ],
+        "clock": [
+            "clock"
+        ],
+        "shelf": [
+            "shelf",
+            "wallshelf"
+        ],
+        "napkin": [
+            "napkin"
+        ],
+        "papertowel": [
+            "papertowel"
+        ],
+        "perfume": [
+            "perfume"
+        ],
+        "powersocket": [
+            "powersocket"
+        ],
+        "cat": [
+            "cat"
+        ],
+        "standingmirror": [
+            "standingmirror"
+        ],
+        "vase": [
+            "vase"
+        ],
+        "box": [
+            "box"
+        ],
+        "rug": [
+            "rug"
+        ]
+    }
+}

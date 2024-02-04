@@ -1,0 +1,53 @@
+{
+    "bathroom": [
+        "walllamp",
+        "faucet",
+        "curtains",
+        "toothpaste",
+        "toilet",
+        "toothbrush",
+        "facecream",
+        "waterglass",
+        "deodorant",
+        "bathroomcounter",
+        "lightswitch",
+        "stall",
+        "bathroomcabinet"
+    ],
+    "livingroom": [
+        "wallpictureframe",
+        "tv",
+        "sofa",
+        "lightswitch"
+    ],
+    "bedroom": [
+        "bed",
+        "pillow"
+    ],
+    "kitchen": [
+        "stove",
+        "condimentshaker",
+        "sink",
+        "stovefan",
+        "breadslice",
+        "coffeepot",
+        "lightswitch",
+        "kitchentable",
+        "fridge",
+        "coffeemaker",
+        "powersocket",
+        "kitchencounter",
+        "oventray",
+        "faucet",
+        "plate",
+        "toaster",
+        "microwave"
+    ],
+    "reduce": [
+        "floor",
+        "ceilinglamp",
+        "ceiling",
+        "wall",
+        "doorjamb"
+    ]
+}

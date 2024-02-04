@@ -30,9 +30,9 @@
 
   <body>
      <div style="text-align: center;">
-         <h2 style="color: black">
-            Which one is cuter?
-        </h2>
+         <h1 style="color: black">
+            Which room would you prefer to live in?
+        </h1>
         <div class="container">
             <div class="column">
                 <h2>Group1</h2>
@@ -77,10 +77,11 @@
 
   <script>
     var id_left = {{ url[0]['id']|tojson|safe }};
-    var id_right = {{ url[0]['id']|tojson|safe }};
+    var id_right = {{ url[1]['id']|tojson|safe }};
     $(document).ready(function() {
         $('#retrieve').click(function() {
             location.reload();
+            window.scrollTo(0, 0);
         });
     });
 
@@ -95,6 +96,7 @@
                 },
                 complete: function() {
                     location.reload();
+                    window.scrollTo(0, 0);
                 }
             });
         });
@@ -111,6 +113,7 @@
                 },
                 complete: function() {
                     location.reload();
+                    window.scrollTo(0, 0);
                 }
             });
         });

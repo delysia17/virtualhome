@@ -40,7 +40,7 @@ def get_img():
 def receive_choice():
     if request.method=='POST':
         now = datetime.now()
-        result[now.strftime("%y%m%d_%H%H%S")] = (request.form.get('better'), request.form.get('worse'))
+        result[now.strftime("%y%m%d_%H%H%S")] = [request.form.get('better'), request.form.get('worse')]
         with open('./results/result.json', 'w') as f:
             json.dump(result, f)
     return 'nothing'

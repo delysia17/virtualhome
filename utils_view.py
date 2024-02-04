@@ -10,7 +10,7 @@ objs_list = ["coffeetable",
             "desk",
             'bathroomcounter',
             "stall",
-            "kitchencounter",
+            # "kitchencounter",
             "kitchentable",
             # "nightstand",
             "sofa",
@@ -116,11 +116,11 @@ def cctv_square(comm, r, camera_args, nrows = 2):
     comm.add_camera(position=left_pos, rotation = left_rot, field_view = field_view)
     cctv_dict['left_corner'] = comm.camera_count()[-1] - 1
     comm.add_camera(position=lower_pos, rotation = lower_rot, field_view = field_view)
-    cctv_dict['lower_corner'] = comm.camera_count()[-1] - 1
+    cctv_dict['upper_corner'] = comm.camera_count()[-1] - 1
     comm.add_camera(position=right_pos, rotation = right_rot, field_view = field_view)
     cctv_dict['right_corner'] = comm.camera_count()[-1] - 1
     
-    return display_scene_cameras(comm, [ cctv_dict['lower_corner'], cctv_dict['left_corner'], cctv_dict['right_corner'], cctv_dict['lower_corner']], nrows = nrows) , cctv_dict
+    return display_scene_cameras(comm, [ cctv_dict['lower_corner'], cctv_dict['left_corner'], cctv_dict['right_corner'], cctv_dict['upper_corner']], nrows = nrows) , cctv_dict
 
 def display_cctv_room(comm, room, nrows = 2):
     r = room['bounding_box']
@@ -169,166 +169,6 @@ def display_top_room(comm, room, nrows = 1):
     c = comm.camera_count()[-1] - 1
     return display_scene_cameras(comm, [c], nrows = nrows)
 
-def get_square_small_table(comm, r, o):
-    """ nightstand, tvtable, coffeetable """
-    o_pos = [0, 0, 0]
-    sign_x = 1 if r['center'][0] - o['center'][0] > 0 else -1
-    sign_z = 1 if r['center'][2] - o['center'][2] > 0 else -1            
-    o_pos[0] = o['center'][0] + 2 * sign_x
-    o_pos[1] = o['center'][1] + 0.8
-    o_pos[2] = o['center'][2] + 2 * sign_z
-    comm.add_camera(position=o_pos, rotation=[10 ,180 * max(sign_z, 0) + 35 * sign_x * sign_z,0], field_view= 50)
-    o_pos[0] = o['center'][0] + 1 * sign_x 
-    o_pos[1] = o['center'][1] + 1
-    o_pos[2] = o['center'][2] + 1 * sign_z
-    comm.add_camera(position=o_pos, rotation=[30 ,180 * max(sign_z, 0) + 35 * sign_x * sign_z,0], field_view= 50)
-    o_pos[0] = o['center'][0] + o['size'][0] * sign_x * 0.5
-    o_pos[1] = o['center'][1] + 1.5
-    o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 0.5
-    comm.add_camera(position=o_pos, rotation=[90 - o['size'][0] * 20 ,180 * max(sign_z, 0) + 30 * sign_x * sign_z + o['size'][0] * 12, 0], field_view= 50)
-    c = comm.camera_count()[1] - 1
-    return c
-
-def get_square_large_table(comm, r, o):
-    """ coffeetable """
-    o_pos = [0, 0, 0]
-    sign_x = 1 if r['center'][0] - o['center'][0] > 0 else -1
-    sign_z = 1 if r['center'][2] - o['center'][2] > 0 else -1
-    o_pos[0] = o['center'][0] - o['size'][0] * sign_x * 1.3
-    o_pos[1] = o['center'][1] + 1.5
-    o_pos[2] = o['center'][2] 
-    comm.add_camera(position=o_pos, rotation=[38 ,180 * max(sign_z, 0) - 90 + 5 * sign_x * sign_z,0], field_view= 45)
-    o_pos[0] = o['center'][0] 
-    o_pos[1] = o['center'][1] + 1.5
-    o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 0.3
-    comm.add_camera(position=o_pos, rotation=[90 - o['size'][0] * 10 ,180 * max(sign_z, 0), 0], field_view= 50)
-    o_pos[0] = o['center'][0] + o['size'][0] * sign_x * 1.3
-    o_pos[1] = o['center'][1] + 1.5
-    o_pos[2] = o['center'][2]
-    comm.add_camera(position=o_pos, rotation=[38 ,180 * max(sign_z, 0) + 90 - 5 * sign_x * sign_z,0], field_view= 45)
-    c = comm.camera_count()[1] - 1
-    return c
-
-def get_square_kitchencounter(comm, r, o):            
-    o_pos = [0, 0, 0]
-    sign_x = 1 if r['center'][0] - o['center'][0] > 0 else -1
-    sign_z = 1 if r['center'][2] - o['center'][2] > 0 else -1
-    o_pos[0] = o['center'][0] + o['size'][0] * sign_x * 0.5
-    o_pos[1] = o['center'][1] + 1
-    o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 0.8
-    comm.add_camera(position=o_pos, rotation=[0 ,180 * max(sign_z, 0)  + 36 * sign_x * sign_z,0], field_view= 45)
-    o_pos[0] = o['center'][0] 
-    o_pos[1] = o['center'][1] + 1
-    o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 0.3
-    comm.add_camera(position=o_pos, rotation=[0, 180 * max(sign_z, 0), 0], field_view= 45)
-    o_pos[0] = o['center'][0] + o['size'][0] * sign_x * 0.3
-    o_pos[1] = o['center'][1] + 1
-    o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 0
-    comm.add_camera(position=o_pos, rotation=[0 ,180 * max(sign_z, 0) + 90 - 0 * sign_x * sign_z,0], field_view= 45)
-    c = comm.camera_count()[1] - 1
-    return c
-
-def get_rectangular_sofa(comm, r, o):            
-    o_pos = [0, 0, 0]
-    sign_x = 1 if r['center'][0] - o['center'][0] > 0 else -1
-    sign_z = 1 if r['center'][2] - o['center'][2] > 0 else -1
-    if o['size'][0] < o['size'][2]:
-        o_pos[0] = o['center'][0] + o['size'][0] * sign_x * 2.2
-        o_pos[1] = o['center'][1] + 1
-        o_pos[2] = o['center'][2] + o['size'][0] * sign_z * 2
-        comm.add_camera(position=o_pos, rotation=[10 ,180 * max(sign_z, 0) + (90 - 25) * sign_x * sign_z,0], field_view= 50)        
-        o_pos[0] = o['center'][0] + o['size'][0] * sign_x * 2.2
-        o_pos[1] = o['center'][1] + 0.8
-        o_pos[2] = o['center'][2] 
-        comm.add_camera(position=o_pos, rotation=[15 ,180 * max(sign_z, 0) + 90 * sign_x * sign_z, 0], field_view= 50)
-        o_pos[0] = o['center'][0] + o['size'][0] * sign_x * 1
-        o_pos[1] = o['center'][1] + 1.4
-        o_pos[2] = o['center'][2] 
-        comm.add_camera(position=o_pos, rotation=[90 - 40 ,180 * max(sign_z, 0) + 90 * sign_x * sign_z, 0], field_view= 50)
-    else:
-        o_pos[0] = o['center'][0] + o['size'][2] * sign_x * 2
-        o_pos[1] = o['center'][1] + 1
-        o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 2.2
-        comm.add_camera(position=o_pos, rotation=[10 ,180 * max(sign_z, 0) + 75 * sign_x * sign_z,0], field_view= 50)      
-        o_pos[0] = o['center'][0] 
-        o_pos[1] = o['center'][1] + 0.8
-        o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 2.2
-        comm.add_camera(position=o_pos, rotation=[15 ,180 * max(sign_z, 0) + 0 * sign_x * sign_z, 0], field_view= 50)
-        o_pos[0] = o['center'][0] 
-        o_pos[1] = o['center'][1] + 1.4
-        o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 1
-        comm.add_camera(position=o_pos, rotation=[90 - 40 , 180 * max(sign_z, 0) + 0 * sign_x * sign_z, 0], field_view= 50)
-    c = comm.camera_count()[1] - 1
-    return c
-
-def get_rectangular_desk(comm, r, o):            
-    o_pos = [0, 0, 0]
-    sign_x = 1 if r['center'][0] - o['center'][0] > 0 else -1
-    sign_z = 1 if r['center'][2] - o['center'][2] > 0 else -1
-    if o['size'][0] - o['size'][2] > 0:
-        o_pos[0] = o['center'][0] - o['size'][0] * sign_x * 0.5
-        o_pos[1] = o['center'][1] + 1.5
-        o_pos[2] = o['center'][2] + o['size'][0] * sign_z * 1.2
-        comm.add_camera(position=o_pos, rotation=[30 ,180 * max(sign_z, 0) - 90 + 65 * sign_x * sign_z,0], field_view= 45)
-        o_pos[0] = o['center'][0] 
-        o_pos[1] = o['center'][1] + 1.8
-        o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 0.7
-        comm.add_camera(position=o_pos, rotation=[90 - o['size'][0] * 15 ,180 * max(sign_z, 0), 0], field_view= 50)
-        o_pos[0] = o['center'][0] + o['size'][0] * sign_x * 1.3
-        o_pos[1] = o['center'][1] + 1.4
-        o_pos[2] = o['center'][2]
-        comm.add_camera(position=o_pos, rotation=[20 ,180 * max(sign_z, 0) + 90 - 5 * sign_x * sign_z,0], field_view= 40)
-    else:
-        o_pos[0] = o['center'][0] + sign_x * o['size'][2] * 1.2
-        o_pos[1] = o['center'][1] + 1.5
-        o_pos[2] = o['center'][2] - sign_z * o['size'][2] * 0.5
-        comm.add_camera(position=o_pos, rotation=[30 , + 180 * max(sign_z, 0)  + 90 + 25 * sign_x * sign_z,0], field_view= 45)
-        o_pos[0] = o['center'][0] + o['size'][0] * sign_x * 0.7
-        o_pos[1] = o['center'][1] + 1.8
-        o_pos[2] = o['center'][2] 
-        comm.add_camera(position=o_pos, rotation=[90 - o['size'][2] * 15 ,90 + 180 * max(sign_z, 0), 0], field_view= 50)
-        o_pos[0] = o['center'][0] 
-        o_pos[1] = o['center'][1] + 1.4
-        o_pos[2] = o['center'][2] + o['size'][2] * sign_z * 1.3
-        comm.add_camera(position=o_pos, rotation=[20 ,180 * max(sign_z, 0)  - 5 * sign_x * sign_z,0], field_view= 40)
-    c = comm.camera_count()[1] - 1
-    return c
-
-def get_large_furniture(comm, r, o):            
-    o_pos = [0, 0, 0]
-    sign_x = 1 if r['center'][0] - o['center'][0] > 0 else -1
-    sign_z = 1 if r['center'][2] - o['center'][2] > 0 else -1
-    if o['size'][0] - o['size'][2] > 0:
-        o_pos = o['center'].copy()
-        o_pos[0] = o['center'][0] + 0.5 * sign_x
-        o_pos[1] = 1.7
-        o_pos[2] = o['center'][2] + 3 * sign_z
-        comm.add_camera(position=o_pos, rotation=[13, 180 * max(sign_z, 0) + 10 * sign_x * sign_z,0], field_view= 50)
-        o_pos[0] = o['center'][0] 
-        o_pos[1] = o['center'][1] + 0.5
-        o_pos[2] = o['center'][2] + sign_z * (1.2 + o['size'][0] * 0.5)
-        comm.add_camera(position=o_pos, rotation=[8 ,180 * max(sign_z, 0) , 0], field_view= 50)
-        o_pos[0] = o['center'][0] 
-        o_pos[1] = o['center'][1] - 0.5
-        o_pos[2] = o['center'][2] + sign_z * (1.2 + o['size'][0] * 0.5)
-        comm.add_camera(position=o_pos, rotation=[0 ,180 * max(sign_z, 0) ,0], field_view= 40)
-    else:
-        o_pos = o['center'].copy()
-        o_pos[0] += 3 * sign_x
-        o_pos[1] = 1.7
-        o_pos[2] += 0.5 * sign_z
-        comm.add_camera(position=o_pos, rotation=[13, 90 + 180 * max(sign_z, 0) + 10 * sign_x * sign_z,0], field_view= 50)
-        o_pos[0] = o['center'][0] + sign_x * (1.2 + o['size'][2] * 0.5)
-        o_pos[1] = o['center'][1] + 0.5
-        o_pos[2] = o['center'][2] 
-        comm.add_camera(position=o_pos, rotation=[8 ,90 + 180 * max(sign_z, 0), 0], field_view= 50)
-        o_pos[0] = o['center'][0] + sign_x * (1.2 + o['size'][2] * 0.5)
-        o_pos[1] = o['center'][1] - 0.5
-        o_pos[2] = o['center'][2]
-        comm.add_camera(position=o_pos, rotation=[0 , 90 + 180 * max(sign_z, 0),0], field_view= 40)
-    c = comm.camera_count()[1] - 1
-    return c
-
 def display_comparison_img(images_old, view = 3 ,nrows=1):
     images = [x for x in images_old]
     h, w, _ = images[0].shape
@@ -336,7 +176,8 @@ def display_comparison_img(images_old, view = 3 ,nrows=1):
 
     missing = ncols * view * nrows - len(images)
     for _ in range(missing):
-        images.append(np.zeros((h, w, 3)).astype(np.uint8))
+        white_image = np.ones((h, w, 3)).astype(np.uint8) * 255
+        images.append(white_image)
     img_final = []
     for it_r in range(nrows):
         init_ind = it_r * ncols * view
@@ -379,7 +220,7 @@ def get_closeup_obj(comm, o, camera_args, sign_x, sign_z):
 def get_closeups_obj(comm, r, obj, cameras,):
     o = obj['bounding_box']
     class_name = obj['class_name']
-    if class_name in ['closet', 'bookshelf'] and max(o['size'][0], o['size'][2]) < 1.5:
+    if class_name in ['closet', 'bookshelf'] and max(o['size'][0], o['size'][2]) < 1.5 :
         class_name = obj['class_name'] + '_small'
     sign_x = 1 if r['center'][0] - o['center'][0] > 0 else -1
     sign_z = 1 if r['center'][2] - o['center'][2] > 0 else -1
@@ -395,7 +236,7 @@ def get_closeup_room(comm, room, view = 3, nrows = 1):
     _, graph = comm.environment_graph()
     cameras = []
     obj_in_room = find_edges_to(graph, room['id'])
-    objs = [obj for _, obj in obj_in_room if (obj['class_name']== 'kitchencounter' and min(obj['bounding_box']['size']) > 0.6) or obj['class_name'] in objs_list]
+    objs = [obj for _, obj in obj_in_room if (obj['class_name']== 'kitchencounter' and max(obj['bounding_box']['size']) > 1.1) or obj['class_name'] in objs_list]
     if len(objs) == 0:
         cameras = []
     else :
